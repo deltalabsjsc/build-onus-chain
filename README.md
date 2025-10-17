@@ -1,13 +1,33 @@
 # Build Onus Chain Contracts
 
-This project is used to build Onus Chain contracts.
+## Prerequisites
 
-Try running some of the following tasks:
+- Node.js >= 20.0.0
+- Hardhat >= 2.26.3
+- Onus Chain Testnet RPC URL in .env file
+- Onus Chain Mainnet RPC URL in .env file
+- Owner Wallet Address in .env file
+- Private Key in .env file
+- ONUS token amount in wallet of deployer on Metamask for paying gas fees
+
+## Setup
 
 ```shell
-npx hardhat help
-npx hardhat test
-REPORT_GAS=true npx hardhat test
-npx hardhat node
-npx hardhat ignition deploy ./ignition/modules/Lock.ts
+cp .env.example .env
+```
+
+Fill in the values in the .env file.
+
+Install dependencies:
+
+```shell
+npm install
+```
+
+## Usage
+
+```shell
+npm run compile
+npm run deploy:testnet
+npm run deploy:mainnet
 ```

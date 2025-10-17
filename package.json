@@ -1,10 +1,20 @@
 {
-  "name": "hardhat-project",
+  "name": "build-onus-chain",
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox": "^6.1.0",
+    "@types/node": "^24.8.1",
     "hardhat": "^2.26.3"
   },
   "dependencies": {
+    "@openzeppelin/contracts": "^5.4.0",
     "dotenv": "^17.2.3"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "scripts": {
+    "compile": "hardhat compile",
+    "deploy:testnet": "hardhat ignition deploy --network onusTestnet",
+    "deploy:mainnet": "hardhat ignition deploy --network onusMainnet"
   }
 }
