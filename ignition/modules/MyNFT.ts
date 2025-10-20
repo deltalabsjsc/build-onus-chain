@@ -5,10 +5,10 @@ dotenv.config();
 const OWNER_WALLET: string = process.env.OWNER_WALLET ?? "";
 if (!OWNER_WALLET) throw new Error("OWNER_WALLET is not set in .env file");
 
-const MyTokenModule = buildModule("MyTokenModule", (m) => {
+const MyNFTModule = buildModule("MyNFTModule", (m) => {
   const initialOwner = m.getParameter("initialOwner", OWNER_WALLET);
-  const myTokenContract = m.contract("MyToken", [initialOwner]);
-  return { myTokenContract };
+  const myNFTContract = m.contract("MyNFT", [initialOwner]);
+  return { myNFTContract };
 });
 
-export default MyTokenModule;
+export default MyNFTModule;
